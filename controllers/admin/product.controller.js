@@ -23,6 +23,16 @@ module.exports.index = async (req,res) => {
     find.title = objectSearch.regex
   }
 
+  //Sort
+  let sort = {};
+
+  if(req.query.sortKey && req.query.sortValue) {
+    sort[req.query.sortKey] = req.query.sortValue
+  } else {
+    sort.position = 'desc';
+  }
+  //End Sort
+
   //Pagination
   const countProducts = await Product.countDocuments(find)
   let objectPagination = paginationHelper({
@@ -31,7 +41,7 @@ module.exports.index = async (req,res) => {
   }, req.query, countProducts)
 
   const products = await Product.find(find)
-  .sort({ position: "desc" })
+  .sort(sort)
   .limit(objectPagination.limitItems)
   .skip(objectPagination.skip)
 
@@ -42,6 +52,7 @@ module.exports.index = async (req,res) => {
     keyword: objectSearch.keyword,
     pagination: objectPagination
   })
+
 }
 
 //[PATCH] /admin/products/change-status/:status/:id
