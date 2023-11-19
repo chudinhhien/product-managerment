@@ -20,7 +20,7 @@
 
 /* Body */
 .body .sider {
-  width: 150px;
+  width: 166px;
   background: #323232;
   color: #fff;
   height: calc(100vh - 56px);
@@ -33,7 +33,8 @@
   margin: 15px;
   position: relative;
   left: 150px;
-  width: calc(100% - 180px);
+  width: calc(100% - 166px);
+  padding: 15px;
 }
 /* End Body */
 

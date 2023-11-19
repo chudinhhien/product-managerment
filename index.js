@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 const flash = require('express-flash')
@@ -30,6 +31,10 @@ app.use(session({
 }));
 app.use(flash());
 //End Flash
+
+//TinyMCE
+app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
+//End TinyMCE
 
 //Ghi đè phương thức để dùng được các phương thức ngoài POST,GET
 app.use(methodOverride('_method'))
