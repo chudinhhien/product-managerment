@@ -32,6 +32,8 @@ module.exports.detail = async (req,res) => {
     
     const product = await Product.findOne(find)
 
+    // product.price  = product.price.toLocaleString("en-US", {style:"currency", currency:"USD"})
+
     res.render('client/pages/products/detail', {
       pageTitle: product.title,
       product: product

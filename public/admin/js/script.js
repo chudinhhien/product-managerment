@@ -170,8 +170,8 @@ if(uploadImage) {
   }
 
 }
-
 // End Upload Image
+
 
 //SORT
 const sort = document.querySelector('[sort]')
