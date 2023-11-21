@@ -13,8 +13,6 @@ module.exports.index = async (req, res) => {
     return item;
   })
 
-  console.log(newProducts)
-
   res.render('client/pages/products/index', {
     pageTitle: 'Trang danh sách sản phẩm',
     products: newProducts
