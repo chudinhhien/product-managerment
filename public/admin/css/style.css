@@ -20,12 +20,12 @@
 
 /* Body */
 .body .sider {
-  width: 166px;
+  width: 168px;
   background: #323232;
   color: #fff;
-  height: calc(100vh - 56px);
+  height: calc(100vh - 60px);
   position: fixed;
-  top: 56px;
+  top: 70px;
   left: 0;
 }
 
@@ -130,3 +130,12 @@
   display: none;
 }
 /* End Image Preview */
+
+/* Avatar */
+a.avatar img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  height: 50px;
+  object-fit: cover;
+}

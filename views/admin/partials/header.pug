@@ -8,6 +8,11 @@ header.header
       .col-9
         div(class="text-right")
           a(
+            href=`${prefixAdmin}/my-account`
+            class="avatar"
+          )
+            img(src=user.avatar)
+          a(
             href=`${prefixAdmin}/auth/logout`
             class="btn btn-danger btn-sm"
           ) Đăng xuất
