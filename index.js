@@ -49,7 +49,7 @@ app.use(bodyParser.urlencoded({
 app.locals.prefixAdmin = systemConfig.prefixAdmin
 app.locals.moment = moment
 
-app.use(express.static(`${__dirname}/public`))
+app.use(express.static(`${__dirname}/public/`))
 
 //Routes
 route(app);
