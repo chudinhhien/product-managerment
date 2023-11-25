@@ -139,3 +139,34 @@ a.avatar img {
   height: 50px;
   object-fit: cover;
 }
+
+/* Page Login */
+.login {
+  color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.login h1 {
+  padding-top: 100px;
+}
+
+.page-login {
+  color: #000;
+  border: 1px solid #000;
+  padding: 15px 15px 50px 15px;
+  background-color: #fff;
+}
+
+.title-login {
+  border: 1px solid #000;
+  background-color: aqua;
+  padding: 15px 15px;
+  margin: 0;
+  width: 100%;
+}
+
+/* End Page Login */
